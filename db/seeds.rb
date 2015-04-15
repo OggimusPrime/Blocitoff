@@ -9,38 +9,49 @@
 require 'faker'
 
 #create Users
-5.times do
-  user = User.new(
-    username: Faker::Name.name,
-    email: Faker::Internet.email,
-    password: Faker::Lorem.characters(10)
-    )
-  user.skip_confirmation!
-  user.save!
-end
-users = User.all
-puts "5 users created"
+# 5.times do
+#   user = User.new(
+#     username: Faker::Name.name,
+#     email: Faker::Internet.email,
+#     password: Faker::Lorem.characters(10)
+#     )
+#   user.skip_confirmation!
+#   user.save!
+# end
+# users = User.all
+# puts "5 users created"
 
 #Create Lists
-15.times do 
-  list = List.create!(
-    user: users.sample,
-    title: Faker::Lorem.sentence,
-    description: Faker::Lorem.paragraph
-    )
-end
-puts "15 lists created"
+# 15.times do 
+#   list = List.create!(
+#     user: users.sample,
+#     title: Faker::Lorem.sentence,
+#     description: Faker::Lorem.paragraph
+#     )
+# end
+# puts "15 lists created"
 lists = List.all
+
+# 50.times do
+#   item = Item.create!(
+#     list: lists.sample,
+#     name: Faker::Lorem.sentence
+#     )
+# end
+# puts "50 items created"
+
 
 50.times do
   item = Item.create!(
     list: lists.sample,
-    name: Faker::Lorem.sentence
+    name: Faker::Lorem.sentence,
+    created_at: Time.now - 10.days
     )
 end
-puts "50 items created"
+puts "50 older items created"
 
 puts "Seed finished"
+
 
 
 
