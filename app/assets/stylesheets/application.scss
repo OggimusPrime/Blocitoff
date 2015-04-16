@@ -13,26 +13,26 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap-sprockets";
- @import "bootstrap";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
-  @media (min-width: 464px) {
-    .sign-up {
-      width: 66%;
-    }
- }
+@media (min-width: 464px) {
+  .sign-up {
+    width: 66%;
+  }
+}
 
-  @media (min-width: 668px) {
-    .sign-up {
-      width: 40%;
-    }
- }
+@media (min-width: 668px) {
+  .sign-up {
+    width: 40%;
+  }
+}
 
-   @media (min-width: 992px) {
-    .sign-up {
-      width: 33.33333333%;
-    }
- }
+@media (min-width: 992px) {
+  .sign-up {
+    width: 33.33333333%;
+  }
+}
 
  // .nav {
  //    margin-top: 5px;
@@ -49,28 +49,32 @@
  //    margin: auto;
  // }
 
- .user-info {
-    margin-top: 3px;
- }
+.user-info {
+  margin-top: 3px;
+}
 
- .no-col-pad {
-    padding-right: 0;
-    padding-left: 0;
- }
+.no-col-pad {
+  padding-right: 0;
+  padding-left: 0;
+}
 
- .marg-top {
-    margin-top: 20px;
- }
+.marg-top {
+  margin-top: 20px;
+}
 
- .page-header {
-    margin: 20px 0 0;
- }
+.page-header {
+  margin: 20px 0 0;
+}
 
- .main-content {
-    margin-top: 20px;
- }
+.main-content {
+  margin-top: 20px;
+}
+
+.user-name {
+  margin-bottom: 15px;
+}
 
  // .page-content {
- //    margin-top: 20px;
+ //   margin-top: 20px;
  // }
 
