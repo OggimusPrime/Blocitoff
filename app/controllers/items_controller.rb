@@ -14,7 +14,8 @@ class ItemsController < ApplicationController
 
     authorize @item
     if @item.save
-      redirect_to @list, notice: "Item added to list."
+      flash[:notice] = "Item added to list."
+      redirect_to @list
     else
       flash[:error] = "Error creating item. Please try again."
       render :new
