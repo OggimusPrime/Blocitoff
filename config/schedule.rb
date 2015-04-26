@@ -19,6 +19,6 @@
 
 # Learn more: http://github.com/javan/whenever
 
-every 1.day do
+every :reboot do
   rake "todo:delete_items"
 end
