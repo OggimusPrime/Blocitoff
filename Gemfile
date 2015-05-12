@@ -35,4 +35,3 @@ group :development, :test do
   gem 'capybara'
   gem 'faker'
 end
-

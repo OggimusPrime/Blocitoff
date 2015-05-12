@@ -15,3 +15,32 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
+
+
+var sendTrackableEvent = function(domain, url, event){
+  var _bm_event = {
+    event: {
+      domain: domain,
+      url: url,
+      event: event
+    }
+  };
+
+  var _bm_request = new XMLHttpRequest();
+  _bm_request.open('POST', 'http://localhost:3001/events', true);
+  _bm_request.setRequestHeader('Content-Type', 'application/json');
+  _bm_request.setRequestHeader('Authorization', 'Token token=dacb9f7b92c77a922f9c878ac63abc4c' );
+  _bm_request.onreadystatechange = function() {
+  };
+  _bm_request.send(JSON.stringify(_bm_event));
+};
+
+$(document).ready(function(){
+    sendTrackableEvent(document.location.host, document.location.pathname, "pageview")
+
+    $("a.trackable").click(function(){
+            alert( "test" );
+            sendTrackableEvent(document.location.host, document.location.pathname, $(this).data("track"));
+        }
+    )
+});
