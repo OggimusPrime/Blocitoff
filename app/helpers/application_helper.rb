@@ -7,9 +7,9 @@ module ApplicationHelper
       content_tag :div, capture(&block), class: 'form-group'
     end
   end
-  
+
   def my_name
-    "Ryan Haase"
+    'Ryan Haase'
   end
 
   def resource_name

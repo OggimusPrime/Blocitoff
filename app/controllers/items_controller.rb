@@ -1,6 +1,4 @@
 class ItemsController < ApplicationController
-  # respond_to :html
-
   def new
     @list = List.find(params[:list_id])
     @item = Item.new
@@ -13,11 +11,12 @@ class ItemsController < ApplicationController
     @item.list = @list
 
     authorize @item
+
     if @item.save
-      flash[:notice] = "Item added to list."
+      flash[:notice] = 'Item added to list.'
       redirect_to @list
     else
-      flash[:error] = "Error creating item. Please try again."
+      flash[:error] = 'Error creating item. Please try again.'
       render :new
     end
   end
@@ -29,15 +28,14 @@ class ItemsController < ApplicationController
     authorize @item
 
     if @item.destroy
-      flash[:notice] = "Task Completed."
-      # redirect_to @list
+      flash[:notice] = 'Task Completed.'
     else
-      flash[:error] = "Task couldn't be deleted. Try again."
+      flash[:error] = 'Task could not be deleted. Try again.'
     end
 
     respond_to do |format|
       format.html
-      format.js 
+      format.js
     end
   end
 end

@@ -3,7 +3,7 @@
       <li id="item-<%= item.id %>" class="list-group-item">
         <%= link_to "", [item.list, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok trackable', 'data-track' => 'item_destroyed' %>
         <%= item.name %>
-        <span class="pull-right">Days Remaining: <%= item.days_left %></span>
+        <span class="pull-right">Days Remaining: <%= item.days_left %> </span>
       </li>
   <% end %>
 </ul>
