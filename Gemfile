@@ -14,7 +14,7 @@ gem 'devise'
 gem 'figaro', '1.0'
 gem 'puma'
 gem 'pundit'
-gem 'whenever', :require => false
+gem 'whenever', require: false
 gem 'newrelic_rpm'
 
 group :production do

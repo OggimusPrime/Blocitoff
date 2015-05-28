@@ -22,14 +22,11 @@ class ListsController < ApplicationController
 
     authorize @list
     if @list.save
-      redirect_to @list, notice: "List was saved."
+      redirect_to @list, notice: 'List was saved.'
     else
-      flash[:error] = "Error creating list. Please try again."
+      flash[:error] = 'Error creating list. Please try again.'
       render :new
     end
-  end 
-
-  def edit
   end
 
   def destroy
@@ -42,7 +39,7 @@ class ListsController < ApplicationController
       flash[:notice] = "\"#{title}\" was deleted successfully."
       redirect_to authenticated_root_path
     else
-      flash[:error] = "There was an error deleting the list."
+      flash[:error] = 'There was an error deleting the list.'
       render :show
     end
   end
