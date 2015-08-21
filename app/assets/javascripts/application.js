@@ -39,7 +39,6 @@ $(document).ready(function(){
     sendTrackableEvent(document.location.host, document.location.pathname, "pageview")
 
     $("a.trackable").click(function(){
-            alert( "test" );
             sendTrackableEvent(document.location.host, document.location.pathname, $(this).data("track"));
         }
     )

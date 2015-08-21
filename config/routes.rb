@@ -1,4 +1,4 @@
-Blocitoff::Application.routes.draw do
+Markitoff::Application.routes.draw do
 
   devise_for :users
 
